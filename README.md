@@ -19,3 +19,5 @@ Or
 ```
 devtools::install_github("claudiolucinda\AuctionsBR")
 ```
+
+That implies the `AuctionsBR` package is now installed. Maybe you need to run the `library(AuctionsBR)` line somewhere.
