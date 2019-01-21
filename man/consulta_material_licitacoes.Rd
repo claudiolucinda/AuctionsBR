@@ -7,10 +7,10 @@
 consulta_material_licitacoes(material)
 }
 \arguments{
-\item{material}{- código do material}
+\item{material}{- codigo do material}
 }
 \value{
-Dataframe com as Licitações onde pelo menos um lote era desse produto
+Dataframe com as Licitacoes onde pelo menos um lote era desse produto
 }
 \description{
 Title

@@ -7,7 +7,7 @@
 consulta_grupo_classe(grupo)
 }
 \arguments{
-\item{grupo}{- código de grupo de produtos}
+\item{grupo}{- codigo de grupo de produtos}
 }
 \value{
 Dataframe com a lista de classes dentro de um determinado produto

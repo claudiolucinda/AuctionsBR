@@ -7,18 +7,18 @@
 consulta_leilao_chars(leilao)
 }
 \arguments{
-\item{leilao}{- Número do leilão}
+\item{leilao}{- Numero do leilao}
 }
 \value{
 - Dataframe com os seguintes campos:
 \item{decreto_7174}{Decreto 7174}
-\item{descricao_detalhada_item}{Descrição complementar do item}
-\item{descricao_item}{Descrição do item}
+\item{descricao_detalhada_item}{Descricao complementar do item}
+\item{descricao_item}{Descricao do item}
 \item{fornecedor_vencedor}{Nome do fornecedor vencedor}
 \item{margem_preferencial}{Margem Preferencial}
 \item{menor_lance}{Valor do melhor lance}
 \item{quantidade_item}{Quantidade do item}
-\item{situacao_item}{Descrição da situação do item}
+\item{situacao_item}{Descricao da situacao do item}
 \item{tratamento_diferenciado}{Tratamento diferenciado}
 \item{unidade_fornecimento}{Unidade de fornecimento}
 \item{valor_estimado_item}{Valor estimado do item}

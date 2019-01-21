@@ -1,6 +1,6 @@
 #' Retornando as classes para um determinado grupo
 #'
-#' @param grupo - código de grupo de produtos (DOIS dígitos)
+#' @param grupo - codigo de grupo de produtos (DOIS digitos) - se comecar com um zero, colocar entre aspas.
 #'
 #' @return Dataframe com a lista de classes dentro de um determinado produto
 #' @export
@@ -8,7 +8,7 @@
 #' @examples
 #'
 consulta_grupo_classe<-function(grupo) {
-  if (nchar(trunc(grupo))!=2) {
+  if (nchar(as.character(grupo))!=2) {
     stop("Classe tem que ter dois dígitos")
   }
 

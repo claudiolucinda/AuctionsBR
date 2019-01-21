@@ -7,7 +7,7 @@
 consulta_pdm_materiais(pdm)
 }
 \arguments{
-\item{pdm}{- Código PDM}
+\item{pdm}{- Codigo PDM}
 }
 \value{
 - Materiais no PDM escolhido

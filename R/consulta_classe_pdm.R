@@ -1,6 +1,6 @@
 #' Retorna os PDM de uma determinada classe
 #'
-#' @param classe - O número da classe (QUATRO dígitos)
+#' @param classe - O numero da classe (QUATRO digitos) - se comecar com um zero, colocar entre aspas.
 #'
 #' @return Um Dataframe com todos os PDM dentro de uma classe
 #' @export
@@ -8,7 +8,7 @@
 #' @examples
 
 consulta_classe_pdm<-function(classe) {
-  if (nchar(trunc(classe))!=4) {
+  if (nchar(as.character(classe))!=4) {
     stop("Classe tem que ter quatro dígitos")
   }
   Final_url<-paste0("http://compras.dados.gov.br/materiais/v1/pdms?codigo_classe=",classe)

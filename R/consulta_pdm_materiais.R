@@ -1,14 +1,14 @@
 #' Title
 #'
-#' @param pdm - Código PDM - CINCO dígitos
+#' @param pdm - Codigo PDM - CINCO digitos - se comecar com um zero, colocar entre aspas.
 #'
 #' @return - Materiais no PDM escolhido
 #' @export
 #'
 #' @examples
 consulta_pdm_materiais<-function(pdm) {
-  if (nchar(trunc(pdm))!=5) {
-    stop("PDM tem que ter cinco dígitos")
+  if (nchar(as.character(pdm))!=5) {
+    stop("PDM tem que ter cinco digitos")
   }
 
   Final_url<-paste0("http://compras.dados.gov.br/materiais/v1/materiais?pdm=",pdm)

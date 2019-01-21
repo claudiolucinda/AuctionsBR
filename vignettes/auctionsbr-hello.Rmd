@@ -1,0 +1,46 @@
+---
+title: "Auctions BR"
+author: "Claudio R. Lucinda"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This is a small package designed to get data from the ComprasNet API interface. So far, the available functions are more designed to navigate through the product classifications of the CATMAT Brazilian system and, after that, getting data from the auctions in which there was a lot with this product. The functions are:
+
+- `consulta_grupo_classe` - from a two digit GROUP code, get all four digit CLASS codes
+- `consulta_classe_pdm` - from a four digit CLASS code, get all five digit PDM codes
+- `consulta_pdm_materiais` - from a five digit PDM code, get all MATERIAL six digir codes
+- `consulta_material_licitações` - from a MATERIAL code, get all auctions in which this material was at least at one auction.
+- `consulta_leilao_chars` - from a specific auction code, get all characteristics of auctions (including winning bids)
+
+Whenever an argument (code) has a leading zero, you should input it as a string.
+
+All functions are supposed to return a Data Frame with reasonably self-explaining column names.
+
+## Examples
+
+Get all CLASS codes associated with GROUP 38:
+`consulta_grupo_classe(38)`
+
+Get all PDMs associated with CLASS 3810:
+`consulta_classe_pdm(3810)`
+
+Get all MATERIAIS associated with PDM 16916
+`consulta_pdm_materiais(16916)`
+
+Get all auctions in which MATERIAL 66206 was at least at one lot.
+`consulta_material_licitacoes(66206)`
+
+Get all items for an specific auction 
+`consulta_leilao_chars(1600080000052017)`
